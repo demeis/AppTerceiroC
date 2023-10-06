@@ -8,5 +8,4 @@
         <Entry x:Name="txtNome"/>
         <Button Text="Salvar" x:Name="btnSalvar" Clicked="btnSalvar_Clicked"/>
     </StackLayout>
-
 </ContentPage>
