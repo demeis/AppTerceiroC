@@ -6,6 +6,6 @@ namespace AppTerceiroC
 {
     public static class Conexao
     {
-        public static string strConexao = "server=bancomodulo.ddns.net;port=3306;user=seu_usuario;password=sua_senha;database=seu_banco;";
+        public static string strConexao = "server=bancomodulo.ddns.net;port=3306;user=lucas.moreira;password=Modulo@2021;database=bdmodulo;";
     }
 }

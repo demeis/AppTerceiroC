@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySqlConnector;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -15,9 +16,18 @@ namespace AppTerceiroC
             InitializeComponent();
         }
 
-        private void btnSalvar_Clicked(object sender, EventArgs e)
+        private async void btnSalvar_Clicked(object sender, EventArgs e)
         {
-            txtNome.Text = "Parabéns test pessoal.";
+            MySqlConnection conn = new MySqlConnection(Conexao.strConexao);
+            MySqlCommand inserirNome = new MySqlCommand(ComandoSQL.inserirNome, conn);
+
+            inserirNome.Parameters.AddWithValue("@nome", txtNome.Text);
+            conn.Open();
+            inserirNome.ExecuteNonQuery();
+            conn.Close();
+
+            txtNome.Text = "";
+            await DisplayAlert("Atenção", "Nome salvo com sucesso!", "ok");
         }
     }
 }
