@@ -17,7 +17,7 @@ namespace AppTerceiroC
 
         private void btnSalvar_Clicked(object sender, EventArgs e)
         {
-            txtNome.Text = "Parabéns pessoal.";
+            txtNome.Text = "Parabéns test pessoal.";
         }
     }
 }
