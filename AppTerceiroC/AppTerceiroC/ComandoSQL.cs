@@ -6,7 +6,7 @@ namespace AppTerceiroC
 {
     public static class ComandoSQL
     {
-        public static string inserirNome = "INSERT INTO tbl_cliente(nome) values(@nome)";
+        public static string inserirNome = "INSERT INTO tbl_usuario(Nome, CPF) values(@nome, @cpf)";
 
     }
 }

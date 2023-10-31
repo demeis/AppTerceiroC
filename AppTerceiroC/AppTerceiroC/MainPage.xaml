@@ -6,6 +6,8 @@
     <StackLayout Padding="50" BackgroundColor="#f7a8e2">
         <Label Text="Nome"/>
         <Entry x:Name="txtNome"/>
+        <Label Text="Cpf"/>
+        <Entry x:Name="txtCpf"/>
         <Button Text="Salvar" x:Name="btnSalvar" Clicked="btnSalvar_Clicked"/>
     </StackLayout>
 </ContentPage>

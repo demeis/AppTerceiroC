@@ -22,11 +22,13 @@ namespace AppTerceiroC
             MySqlCommand inserirNome = new MySqlCommand(ComandoSQL.inserirNome, conn);
 
             inserirNome.Parameters.AddWithValue("@nome", txtNome.Text);
+            inserirNome.Parameters.AddWithValue("@cpf", txtCpf.Text);
             conn.Open();
             inserirNome.ExecuteNonQuery();
             conn.Close();
 
             txtNome.Text = "";
+            txtCpf.Text = "";
             await DisplayAlert("Atenção", "Nome salvo com sucesso!", "ok");
         }
     }
